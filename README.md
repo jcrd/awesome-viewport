@@ -36,7 +36,7 @@ This tag will be the new viewport.
 Get the viewport for the focused screen:
 
 ```lua
-viewport.viewport()
+viewport()
 ```
 
 Toggle another tag into view:
