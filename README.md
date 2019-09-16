@@ -48,6 +48,9 @@ awful.tag.viewtoggle(tag2)
 the viewport changes and `tag1` is re-viewed, `tag2` will also be toggled into
 view.
 
+See the [API documentation](https://jcrd.github.io/awesome-viewport/) for
+descriptions of all functions.
+
 ## License
 
 awesome-viewport is licensed under the GNU General Public License v3.0 or later
