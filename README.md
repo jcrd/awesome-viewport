@@ -20,8 +20,7 @@ local viewport = require("awesome-viewport")
 
 Connect to a screen to begin managing its tags:
 ```lua
-screen.connect_signal("request::desktop_decoration",
-  function (s)
+awful.screen.connect_for_each_screen(function (s)
       viewport.connect(s)
   end)
 ```
