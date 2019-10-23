@@ -30,10 +30,19 @@ local function update(s)
     end
 end
 
+--- Get the viewport of a given screen.
+--
+-- @param s The screen, defaults to `awful.screen.focused().selected_tag`.
+-- @return The viewport tag.
+-- @function viewport
+local function get_viewport(s)
+    s = s or awful.screen.focused()
+    return s.viewport or s.selected_tag
+end
 
 local function tag(c)
     if not c.first_tag then
-        c:toggle_tag(viewport.viewport(c.screen))
+        c:toggle_tag(get_viewport(c.screen))
     end
 end
 
@@ -51,16 +60,6 @@ end
 function viewport.disconnect(s)
     s:disconnect_signal("tag::history::update", update)
     client.disconnect_signal("request::tag", tag)
-end
-
---- Get the viewport of a given screen.
---
--- @param s The screen, defaults to `awful.screen.focused().selected_tag`.
--- @return The viewport tag.
--- @function viewport
-local function get_viewport(s)
-    s = s or awful.screen.focused()
-    return s.viewport or s.selected_tag
 end
 
 setmetatable(viewport, {__call = function (_, s) return get_viewport(s) end})
