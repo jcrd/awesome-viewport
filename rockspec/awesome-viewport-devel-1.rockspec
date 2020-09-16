@@ -7,7 +7,7 @@ source = {
 description = {
     summary = "AwesomeWM library for managing tags based on viewports",
     homepage = "https://github.com/jcrd/awesome-viewport",
-    license = "GPL-3.0",
+    license = "MIT",
 }
 dependencies = {
     "lua >= 5.1",

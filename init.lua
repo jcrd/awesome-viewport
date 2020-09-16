@@ -1,3 +1,5 @@
+-- This project is licensed under the MIT License (see LICENSE).
+
 --- Manage tags based on viewports.
 --
 -- Once connected to a screen via `viewport.connect(screen)`, selecting a single
