@@ -3,12 +3,12 @@
 --- Manage tags based on viewports.
 --
 -- Once connected to a screen via `viewport.connect(screen)`, selecting a single
--- tag will make that tag the new viewport. This tag will remember any other
+-- tag will make that tag the active viewport. This tag will remember any other
 -- selected tags when the viewport changes, so that when it is re-selected,
 -- all previously selected tags are viewed.
 --
 -- @author James Reed &lt;jcrd@tuta.io&gt;
--- @copyright 2019 James Reed
+-- @copyright 2019-2020 James Reed
 -- @module awesome-viewport
 
 local awful = require("awful")
@@ -32,7 +32,7 @@ local function update(s)
     end
 end
 
---- Get the viewport of a given screen.
+--- Get the active viewport of a given screen.
 --
 -- @param s The screen, defaults to `awful.screen.focused().selected_tag`.
 -- @return The viewport tag.
